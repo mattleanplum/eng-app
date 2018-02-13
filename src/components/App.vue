@@ -73,10 +73,9 @@ export default {
         },
         joinSegments(i){
             var popped = this.segments.splice(i + 1, 1)
-            popped.forEach(p => {
-                this.segments[i].push(p[0]) // add to previous array
-            })
-           
+            popped[0].forEach(p => {
+                this.segments[i].push(p) // add to previous array
+            })         
         },
         handleAddNewSegment(e){
             this.segments.push(e)
